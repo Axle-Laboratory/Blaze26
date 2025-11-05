@@ -15,9 +15,11 @@ echo "Preparing Blaze26"
 echo "Building Blaze26"
 
 %install
-mkdir -p %{buildroot}/usr/bin
-echo "#!/bin/bash\necho BlazeOS 26 launcher" > %{buildroot}/usr/bin/blaze26-launcher
-chmod +x %{buildroot}/usr/bin/blaze26-launcher
+install -D -m 755 %{SOURCE0} %{buildroot}/usr/bin/blaze26-launcher
+install -D -m 644 %{SOURCE1} %{buildroot}/usr/share/applications/blaze26.desktop
+install -D -m 644 %{SOURCE2} %{buildroot}/usr/share/icons/blaze26-logo.png
 
 %files
 /usr/bin/blaze26-launcher
+/usr/share/applications/blaze26.desktop
+/usr/share/icons/blaze26-logo.png
