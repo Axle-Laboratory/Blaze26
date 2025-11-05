@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=BlazeOS Launcher
+Exec=/usr/bin/blaze26-launcher
+Icon=blaze26-logo
+Type=Application
+Categories=Utility;
